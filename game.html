@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TarteAuxPatates">
+    <title>Rhythm Game Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>Rhythm Game Application</h1>
+        <button id="toggleMode" onclick="toggleMode()">Light Mode</button>
+        
+        <div class="home-screen">
+            <input type="text" id="musicTitle" placeholder="Enter music title">
+            <button class="start-game" onclick="startGame()">Start Game</button>
+            <button class="view-attempts" onclick="viewAllAttempts()">View All Attempts</button>
+        </div>
+
+        <div class="gameplay" style="display: none;">
+            <h2 id="selectedTitle"></h2>
+            <label for="attemptsInput">Attempts: </label>
+            <input type="number" id="attemptsInput" oninput="setAttempts()">
+            <label for="difficulty">Difficulty: </label>
+            <select id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Normal">Medium</option>
+                <option value="Hard">Hard</option>
+                <option value="Logic">Logic</option>
+                <option value="Tatsukete">Tasukete</option>
+            </select>
+            <label for="misses">Misses: </label>
+            <input type="number" id="misses">
+            <label for="successRate">Success Rate (%): </label>
+            <input type="number" id="successRate" step="0.01">
+            <label for="bestAttempt">Best Attempt: </label>
+            <input type="number" id="bestAttempt">
+            <label for="successRate">Progress (%): </label>
+            <input type="number" id="progress" step="0.01">
+            <label for="succeed">Succeed: </label>
+            <input type="checkbox" id="succeed">
+
+            <button class="save-performance" onclick="savePerformance()">Save Performance</button>
+            <button class="view-results" onclick="viewResults()">View Results</button>
+            <button class="go-back" onclick="goBack()">Go Back</button>
+        </div>
+
+        <div class="results" style="display: none;">
+            <h2>Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Difficulty</th>
+                        <th>Misses</th>
+                        <th>Success Rate</th>
+                        <th>Best Attempt</th>
+                        <th>Progress</th>
+                        <th>Succeed</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTableBody"></tbody>
+            </table>
+            <button class="go-back" onclick="goBack()">Go Back</button>
+        </div>
+
+        <div class="attempts" style="display: none;">
+            <h2>My Attempts</h2>
+            <div class="attempts-list">
+
+                <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search by title...">
+                <input type="file" id="fileInput" accept=".csv">
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Title</th>
+                            <th onclick="sortTable(1)">Attempts</th>
+                            <th onclick="sortTable(2)">Difficulty</th>
+                            <th onclick="sortTable(3)">Misses</th>
+                            <th onclick="sortTable(4)">Success Rate</th>
+                            <th onclick="sortTable(5)">Best Attempt</th>
+                            <th onclick="sortTable(5)">Progress</th>
+                            <th onclick="sortTable(6)">Succeed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attemptsTableBody"></tbody>
+                </table>
+            </div>
+            <button class="csv" onclick="downloadCSV()">Download CSV</button>
+            <button class="pdf" onclick="downloadPDF()">Download PDF</button>
+            <button class="delete-all" onclick="deleteAll()">Delete All</button>
+            <select id="playlistDropdown" class="playlist-dropdown" onchange="changePlaylist()"></select>
+    
+            <button class="go-back" onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

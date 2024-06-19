@@ -1,0 +1,337 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #333 0%, #000 100%);
+  color: #ddd;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.attempts th {
+  position: sticky;
+  top: 0;
+  background: #f1f1f1; 
+  z-index: 1;
+}
+body.dark-mode .container {
+  background-color: #222;
+  color: #ddd;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #555;
+}
+
+body.dark-mode .header h1 {
+  color: #ddd;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"], select {
+  margin: 10px 0;
+  padding: 10px;
+  width: calc(100% - 22px);
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="number"], 
+body.dark-mode select {
+  border: 1px solid #555;
+  background-color: #333;
+  color: #ddd;
+}
+
+
+
+
+body.light-mode #searchInput {
+  background-color: #fff;    
+  color: #000;               
+  border: 1px solid #ccc;    
+}
+
+
+body.dark-mode input[type="text"]#searchInput {
+  color: white;
+}
+
+.input-group input:focus, .input-group select:focus {
+  border-color: #555;
+  outline: none;
+}
+
+body.dark-mode .input-group input:focus, 
+body.dark-mode .input-group select:focus {
+  border-color: #ddd;
+}
+
+.input-group button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+.input-group button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .input-group button {
+  background-color: #bb0022;
+  color: white;
+}
+
+body.dark-mode .input-group button:hover {
+  background-color: #990011;
+}
+
+button.go-back, button.view-results, button.save-performance, button.start-game, button.view-attempts {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.go-back:hover, button.view-results:hover, button.save-performance:hover, button.start-game:hover, button.view-attempts:hover {
+  background-color: #218838;
+}
+
+body.dark-mode button.go-back, 
+body.dark-mode button.view-results,
+body.dark-mode button.save-performance,
+body.dark-mode button.start-game,
+body.dark-mode button.view-attempts {
+  background-color: #bb0022;
+}
+
+body.dark-mode button.go-back:hover, 
+body.dark-mode button.view-results:hover,
+body.dark-mode button.save-performance:hover,
+body.dark-mode button.start-game:hover,
+body.dark-mode button.view-attempts:hover {
+  background-color: #990011;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.create-playlist {
+  background-color: #FF9800; 
+  color: white;
+}
+
+button.delete-playlist {
+  background-color: #E91E63;
+  color: white;
+}
+
+button.duplicate-playlist {
+  background-color: #9C27B0;
+  color: white;
+}
+
+button.switch-playlist {
+  background-color: #009688; 
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+body.dark-mode button.delete {
+  background-color: #dd1144;
+}
+
+body.dark-mode button.delete:hover {
+  background-color: #bb0022;
+}
+
+button.csv, button.pdf, button.delete-all {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+button.csv, button.pdf, button.delete-all {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+button.csv:hover, button.pdf:hover, button.delete-all:hover {
+  background-color: #138496;
+}
+
+body.dark-mode button.csv, 
+body.dark-mode button.pdf, 
+body.dark-mode button.delete-all {
+  background-color: #dd1144;
+}
+
+body.dark-mode button.csv:hover, 
+body.dark-mode button.pdf:hover, 
+body.dark-mode button.delete-all:hover {
+  background-color: #bb0022;
+}
+
+#toggleMode {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 6px;
+}
+
+#toggleMode:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode #toggleMode {
+  background-color: #dd1144;
+}
+
+body.dark-mode #toggleMode:hover {
+  background-color: #bb0022;
+}
+
+.gameplay, .results, .attempts {
+  display: none;
+}
+
+.results table, .attempts table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fafafa;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+
+body.dark-mode .results table, 
+body.dark-mode .attempts table {
+  background-color: #333;
+}
+
+.results th, .attempts th, .results td, .attempts td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode .results th, 
+body.dark-mode .attempts th, 
+body.dark-mode .results td, 
+body.dark-mode .attempts td {
+  border-bottom: 1px solid #555;
+}
+
+.results th, .attempts th {
+  background-color: #f7f7f7;
+  color: #555;
+  cursor: pointer;
+}
+
+body.dark-mode .results th, 
+body.dark-mode .attempts th {
+  background-color: #444;
+  color: #ddd;
+}
+
+.attempts-list {
+  max-height: 60vh; 
+  overflow-y: auto; 
+  overflow-x: auto; 
+  border-top: 1px solid #ddd; 
+  padding-top: 10px; 
+}
+
+.attempts button.edit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #444;
+  border-color: #555;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
