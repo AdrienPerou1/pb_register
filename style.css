@@ -98,7 +98,7 @@ body.dark-mode .input-group select:focus {
 }
 
 .input-group button {
-  background-color: #007bff;
+  background-color: #123c68;
   color: white;
   border: none;
   cursor: pointer;
@@ -108,7 +108,7 @@ body.dark-mode .input-group select:focus {
 }
 
 .input-group button:hover {
-  background-color: #0056b3;
+  background-color: #123c68;
 }
 
 body.dark-mode .input-group button {
@@ -123,7 +123,7 @@ body.dark-mode .input-group button:hover {
 button.go-back, button.view-results, button.save-performance, button.start-game, button.view-attempts {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: #5fd324;
   color: white;
   border: none;
   border-radius: 6px;
@@ -306,7 +306,7 @@ body.dark-mode .attempts th {
 }
 
 .attempts button.edit {
-  background-color: #4CAF50;
+  background-color: #5fd324;
   color: white;
   border: none;
   border-radius: 6px;
@@ -325,13 +325,3 @@ input[type="checkbox"]:checked {
   border-color: #555;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
